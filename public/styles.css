@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: black; /* Fundo preto */
+    color: white; /* Texto em branco */
+    font-family: Arial, sans-serif; /* Fonte do texto */
+  }
+  
+  #canvasContainer {
+    position: relative; /* Posição relativa para conter o canvas e o texto */
+  }
+  
+  #flockCanvas {
+    display: block;
+    background-color: black; /* Cor de fundo do canvas */
+    margin: auto; /* Centralizar o canvas horizontalmente */
+  }
+  
+  .content {
+    position: absolute; /* Posição absoluta para o texto */
+    top: 50%; /* Posiciona o texto verticalmente no centro */
+    left: 50%; /* Posiciona o texto horizontalmente no centro */
+    transform: translate(-50%, -50%); /* Centraliza o texto usando o valor negativo da metade da largura e altura */
+    max-width: 800px; /* Largura máxima do conteúdo */
+    min-width: 400px;
+    padding: 20px; /* Espaçamento interno */
+    text-align: justify; /* Justificar o texto */
+  }
+  
+  h1 {
+    font-size: 36px; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaçamento inferior do título */
+  }
+  
+  p {
+    font-size: 18px; /* Tamanho do parágrafo */
+    line-height: 1.6; /* Altura de linha para melhor legibilidade */
+    margin-bottom: 10px; /* Espaçamento inferior do parágrafo */
+  }
+
+  .button-container {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .social-buttons-container {
+    margin-top: 10px;
+    display: flex; /* Use flexbox para centralizar os botões lado a lado */
+    justify-content: center; /* Centralize os botões horizontalmente */
+  }
+  
+  .language-button {
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .language-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .linkedin-button,
+.github-button {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  background-color: #0077B5; /* LinkedIn color */
+  border-radius: 50%;
+  margin: 5px;
+  text-decoration: none;
+}
+
+.github-button {
+  background-color: #333; /* GitHub color */
+}
+
+/* Estilos para o segundo botão - Image Generate IA App */
+.app-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007BFF; /* Cor de fundo azul */
+  color: #fff; /* Texto em branco */
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  text-decoration: none; /* Remover sublinhado do link */
+  animation: blinkAnimation 2s infinite;
+}
+
+/* Estilo de hover para o segundo botão */
+.app-button:hover {
+  background-color: #0056b3; /* Cor de fundo azul mais escura ao passar o mouse */
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para o elemento fixo à esquerda */
+#leftSidebar {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50px; /* Largura do elemento fixo */
+  height: 200px; /* Altura do elemento fixo */
+  background-color: #333; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  font-size: 14px; /* Tamanho do texto */
+  padding: 10px; /* Espaçamento interno */
+}
+
+@keyframes blinkAnimation {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* Estilos para o sidebar no topo */
+#topSidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px; /* Altura do sidebar no topo */
+  background-color: #333; /* Cor de fundo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo dos ícones das linguagens */
+.sidebar-icon {
+  font-size: 30px; /* Tamanho dos ícones */
+  color: white; /* Cor do ícone */
+  margin: 0 10px; /* Espaçamento lateral entre os ícones */
+}
+
+/* Estilo dos links das linguagens */
+.sidebar-link {
+  margin-bottom: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Estilo dos links das linguagens quando passar o mouse */
+.sidebar-link:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    max-width: 800px; /* Decrease the max-width for larger screens */
+  }
+
+  /* Add any other necessary adjustments for larger screens */
+}
+
+/* Styles for smaller screens (mobile) */
+@media screen and (max-width: 768px) {
+  .content {
+    max-width: 90%; /* Reduce the max-width for mobile devices */
+    font-size: 16px; /* Decrease font size for better readability on smaller screens */
+  }
+
+  /* Adjust other elements as needed for mobile layout */
+}
