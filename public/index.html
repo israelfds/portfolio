@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css"> <!-- Vincule o arquivo styles.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div id="canvasContainer">
+    <canvas id="flockCanvas"></canvas>
+    <div class="content">
+      <h1 id="title">Hello World!!!</h1>
+      <div id="slideContainer">
+        <p id="slideText"></p>
+      </div>
+      <div class="slide-arrows">
+        <span class="prev-arrow">&#10094;</span>
+        <span class="next-arrow">&#10095;</span>
+      </div>
+      <div class="social-buttons-container">
+        <a href="https://www.linkedin.com/in/israel-feitosa-468920107/" target="_blank" class="social-button linkedin-button"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/israelfds" target="_blank" class="social-button github-button"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+    <div class="button-container">
+      <button class="language-button" id="languageButton">Switch to English</button>
+      <a href="http://localhost:3000/generateimage" target="_blank" class="app-button"><i class="fas fa-image"></i> Image Generate IA App</a>
+      <audio id="backgroundAudio" autoplay loop>
+        <source src="./HotlineBling.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="language.js"></script> <!-- Vincule o arquivo language.js -->
+</body>
+</html>
