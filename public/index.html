@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="styles.css"> <!-- Vincule o arquivo styles.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -25,13 +26,21 @@
     </div>
     <div class="button-container">
       <button class="language-button" id="languageButton">Switch to English</button>
-      <a href="http://localhost:3000/generateimage" target="_blank" class="app-button"><i class="fas fa-image"></i> Image Generate IA App</a>
-      <audio id="backgroundAudio" autoplay loop>
-        <source src="./HotlineBling.mp3" type="audio/mpeg">
-      </audio>
+      <a href="/iWasHere.html" class="app-button">ClickME!!!</a>
+      <div class="users">Visitantes:</div>
+    </div>
+    <div class="panel">
+      <div id="player"></div>
+      <button id="playButton"><i class="fas fa-play"></i></button>
+      <button id="pauseButton"><i class="fas fa-pause"></i></button>
+      <input type="range" id="volumeSlider" min="0" max="100" step="1" value="50">
     </div>
   </div>
+  <div id="nameList"></div>
+  <script src="audio.js"></script>
   <script src="script.js"></script>
   <script src="language.js"></script> <!-- Vincule o arquivo language.js -->
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="randomNames.js"></script>
 </body>
 </html>

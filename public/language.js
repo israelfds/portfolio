@@ -105,17 +105,3 @@ function createLanguageSidebar() {
 }
 
 createLanguageSidebar();
-
-
-    // Obter referência ao elemento de áudio
-    const audio = document.getElementById('backgroundAudio');
-
-    // Função para reproduzir a música ao interagir com a página
-    function playAudio() {
-      audio.play();
-      // Remova o evento após a reprodução para evitar múltiplas reproduções
-      document.removeEventListener('click', playAudio);
-    }
-
-    // Adicione um evento de clique na página para iniciar a reprodução de áudio
-    document.addEventListener('click', playAudio);

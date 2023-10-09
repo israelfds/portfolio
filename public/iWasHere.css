@@ -1,0 +1,69 @@
+body {
+    background-color: #333; /* Fundo cinza escuro */
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Alinha o texto dos rótulos à esquerda */
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: -12px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #007bff; /* Linha de fundo azul */
+    background-color: transparent;
+    color: white;
+    transition: border-bottom 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-bottom: 2px solid #0056b3; /* Linha de fundo azul mais escura ao focar */
+    outline: none;
+}
+
+button.app-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px; /* Cantos arredondados */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.app-button:hover {
+    background-color: #0056b3;
+}

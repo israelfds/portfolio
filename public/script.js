@@ -5,9 +5,9 @@ canvas.height = window.innerHeight;
 
 const flock = [];
 const obstacles = [];
-const numEntities = 3000; // Altere o número de setinhas aqui
+const numEntities = 1000; // Altere o número de setinhas aqui
 const obstacleSize = 100; // Tamanho dos obstáculos
-const avoidanceForce = 1; // Força para desviar dos obstáculos
+const avoidanceForce = 2; // Força para desviar dos obstáculos
 
 
 function randomColor() {

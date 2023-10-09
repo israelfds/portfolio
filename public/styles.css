@@ -12,7 +12,6 @@ body {
   
   #flockCanvas {
     display: block;
-    background-color: black; /* Cor de fundo do canvas */
     margin: auto; /* Centralizar o canvas horizontalmente */
   }
   
@@ -40,7 +39,7 @@ body {
 
   .button-container {
     position: absolute;
-    bottom: 20px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -108,6 +107,7 @@ body {
 .app-button:hover {
   background-color: #0056b3; /* Cor de fundo azul mais escura ao passar o mouse */
   transform: scale(1.05);
+  bottom: 50px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -183,4 +183,90 @@ body {
   }
 
   /* Adjust other elements as needed for mobile layout */
+}
+
+.panel {
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  padding: 10px;
+  text-align: center;
+  z-index: 999; /* Certifica-se de que a div esteja na parte superior de outros elementos */
+  display: flex;
+  flex-direction: row; /* Organize os elementos horizontalmente */
+  align-items: center; /* Alinhe os elementos verticalmente no centro */
+}
+
+#playButton,
+#pauseButton {
+  margin: 5px;
+  font-size: 16px;
+  padding: 5px 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 3px;
+}
+
+#volumeSlider {
+  margin: 5px;
+  font-size: 16px;
+  padding: 5px 0px;
+  cursor: pointer;
+  border: none;
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 3px;
+}
+
+#playButton:hover,
+#pauseButton:hover {
+  background-color: #0056b3;
+}
+
+#volumeSlider {
+  flex-grow: 1; 
+}
+
+#nameList {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center; /* Centralizar o texto horizontalmente */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#nameList p {
+  display: inline;
+  margin-right: 100px; /* Aumente o espaço entre os nomes ajustando este valor */
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+#nameList p.animation {
+  animation: marquee 20s linear infinite;
+  animation-duration: 20s; 
+  display: inline-block;
+  transform-origin: 100% 100%;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.users {
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  margin-top: 15px;
 }
