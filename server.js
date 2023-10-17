@@ -2,9 +2,9 @@ const express = require('express');
 const path = require('path');
 const connection = require('./db/db-conections');
 const bodyParser = require('body-parser');
-
 const https = require('https');
 const fs = require('fs');
+const cors = require('cors'); // Importe o módulo cors
 
 const app = express();
 app.use(bodyParser.json());
@@ -57,7 +57,6 @@ app.post('/api/insertData', (req, res) => {
   });
 });
 
-
 // Rota para buscar a lista de nomes e sobrenomes
 app.get('/api/getNames', (req, res) => {
   const sql = "SELECT firstname, lastname FROM users";
@@ -72,9 +71,14 @@ app.get('/api/getNames', (req, res) => {
   });
 });
 
+const corsOptions = {
+  origin: 'https://miservice.dnslive.net',
+};
+
+app.use(cors(corsOptions));
+
 const server = https.createServer(sslOptions, app);
 
-// Inicie o servidor na porta 443
 server.listen(port, () => {
   console.log(`Server is running at https://miservice.dnslive.net`);
-})
+});
